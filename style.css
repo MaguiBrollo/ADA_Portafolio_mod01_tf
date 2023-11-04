@@ -1,0 +1,104 @@
+
+:root{
+    --variable-color--ppal:#EE457A;
+    --variable-color--sec: #FFFFFF;
+    --variable-ancho-ppal:1200px;
+    --variable-alto-header: 100px;
+}  
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-size: 14px;
+    height: 120vh;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    /* aqui deberia ir font family*/
+}
+
+header{
+    display: none;
+    width: 100%;
+    height: var(--variable-alto-header);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: fixed;  /*posicionamiento fijo (absoluto) */
+    top:0;         /*top acompaña a fixed, significa que quede arriba c/r al browser */
+
+    background-color: var(--variable-color--sec);
+    box-shadow: 0px 10px 15px -3px rgb(214, 204, 204);
+}
+
+nav{
+    width: var(--variable-ancho-ppal);
+    display: flex;
+    justify-content: end;
+}
+
+ul {
+    display: inline;
+    list-style-type: none;     /*saca viñeta  a la lista*/
+}
+
+li {
+    float: left;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 15px;
+    border:1px solid var(--variable-color--ppal);
+    border-radius: 40px;
+}
+ li:hover{
+    background-color: var(--variable-color--ppal);
+ }
+
+a{
+    text-decoration: none;
+    color:#616161;
+}
+a:hover{
+    color: white;
+}
+
+
+
+/*---------------------------*/
+main{
+    width: var(--variable-ancho-ppal);
+    height: 80%;
+    background-color: var(--variable-color--sec);
+    margin-top: calc( var(--variable-alto-header) + 30px);  /*la suma del margin del header + margin para que se vea la sombra*/
+    margin-bottom: 30px;
+    border: 1px solid gray; /*dsps borrar, es solo de guía*/
+}
+
+/*-----------------------*/
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: var(--variable-color--ppal)
+}
+
+
+/*------------------------------------------------*/
+@media (width<=900px) {
+    header{
+      display: none;
+    }
+    main{
+        margin-top: 30px;
+    }
+}
