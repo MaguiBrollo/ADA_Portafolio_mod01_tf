@@ -15,17 +15,19 @@
 
 html{
     font-size: 20px;
-    height: 120vh;  /*es solo para prueba del scroll, dsps vovler a 100*/
+    height: 100vh;
 }
 
 body{
-    height: 100%;
+    height: 100%; /* 100% del padre, que es el html*/
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Lora', serif;
 }
 
+
+/*----------------------- << HEADER >> ------------------------*/
 header{
     width: 100%;
     height: var(--variable-alto-header);
@@ -79,12 +81,9 @@ a:hover{
 
 /*******************************************************************/
 /* ---- media query HEADER -----------------*/
-@media (width<=900px) {
+@media (width<=1100px) {
     header{
       display: none;
-    }
-    main{
-        margin-top: 30px;
     }
 }
 /*******************************************************************/
@@ -93,44 +92,52 @@ a:hover{
 /*----------------------- << MAIN >> ------------------------*/
 main{
     width: 90%;
-    height: 80%; /*veerr*/
     background-color: var(--variable-color-sec);
    
-    margin-top: calc( var(--variable-alto-header) + 30px);  /*la suma del margin del header + margin para que se vea la sombra*/
+    margin-top: calc( var(--variable-alto-header) + 50px);  /*la suma del margin del header + margin para que se vea la sombra*/
     margin-bottom: 30px;
     border: 1px solid gray; /*dsps borrar, es solo de guía*/
 }
 
-/*-----  main - HOLA  -----*/
+/*--------------------  main - HOLA  -----------------------*/
+.seccion-hola{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - var(--variable-alto-header) - 38px);
+}
 .cont-hola{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
 }
 
 .hola-texto, .hola-texto-h3, .hola-texto-h1, .hola-texto-p, .hola-btn{
     text-align: center;
-    margin: 20px 10px;
 }
-
+.hola-texto{
+    padding: 0px 10px;
+}
 .hola-texto-h3{
     font-size: 1.5rem;
 }
 .hola-texto-h1{
     color: var(--variable-color-ppal);
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 .hola-texto-p{
+    width: 90%;
+    margin: 40px 10px;
     color: var(--variable-color-texto);
     font-size: 0.8rem;
 }
 .hola-btn{
     margin: 10px;
-    padding: 10px 15px;
+    padding: 15px 25px;
     border:1px solid var(--variable-color-ppal);
     background-color: var(--variable-color-ppal);
     color: white;
-    font-weight: bold;
+    font-size: 0.8rem;
     border-radius: 40px;
 }
 
@@ -140,6 +147,53 @@ main{
     border: 1px solid black;
 }
 
+/*******************************************************************/
+/* ---- media query MAIN -----------------*/
+
+@media(width>550px ){ /*todavía esta en CELU, pero igual hay un pequeño cambio*/
+    .hola-texto-h1{         /*mi nombre en main-hola*/
+        font-size: 2.5rem;
+    }
+    .hola-texto-p,.hola-img{ /*quedan fijos, antes era 80%*/
+        width: 440px;
+    }
+}
+
+@media(width>1100px ){  /*para tablet y pc*/
+    main{
+        width: 100%;  /*va creciendo hasta el max-width*/
+        max-width: var(--variable-ancho-ppal);
+
+        margin-top: calc( var(--variable-alto-header) + 40px);  /*la suma del margin del header + margin para que se vea la sombra*/
+        margin-bottom: 40px;
+    }
+    .cont-hola{
+        width: 100%;
+        padding: 0px 15px;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    .hola-texto, .hola-texto-h3, .hola-texto-h1, .hola-texto-p, .hola-btn{
+        text-align:left;
+    }
+}
+/*******************************************************************/
+
+
+
+
+
+/*--------------------  main - conocimientos  -----------------------*/
+.cont-conocim{
+    height:100px;
+    background-color: #e2e4eb;
+    text-align: center;
+}
+
+
+
+
 
 
 /*----------------------- << FOOTER >> -----------------------*/
@@ -148,24 +202,3 @@ footer{
     height: 100px;
     background-color: var(--variable-color-ppal)
 }
-
-
-
-
-
-/*******************************************************************/
-/* ---- media query MAIN -----------------*/
-@media(650px <= width <=900px){
-    main{
-        Width: 90%;
-        height: 80%;
-    }
-}
-
-@media(width>900px ){
-    main{
-        width: var(--variable-ancho-ppal);
-        height: 80%;
-    }
-}
-/*******************************************************************/
