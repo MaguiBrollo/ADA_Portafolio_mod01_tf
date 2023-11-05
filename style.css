@@ -1,7 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 :root{
-    --variable-color--ppal:#EE457A;
-    --variable-color--sec: #FFFFFF;
+    --variable-color-ppal:#EE457A;
+    --variable-color-sec: #FFFFFF;
+    --variable-color-texto:#616161;
     --variable-ancho-ppal:1200px;
     --variable-alto-header: 100px;
 }  
@@ -13,8 +14,8 @@
 }
 
 html{
-    font-size: 14px;
-    height: 120vh;
+    font-size: 20px;
+    height: 120vh;  /*es solo para prueba del scroll, dsps vovler a 100*/
 }
 
 body{
@@ -22,12 +23,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
- 
-    /* aqui deberia ir font family*/
+    font-family: 'Lora', serif;
 }
 
 header{
-    display: none;
     width: 100%;
     height: var(--variable-alto-header);
 
@@ -38,7 +37,7 @@ header{
     position: fixed;  /*posicionamiento fijo (absoluto) */
     top:0;         /*top acompaña a fixed, significa que quede arriba c/r al browser */
 
-    background-color: var(--variable-color--sec);
+    background-color: var(--variable-color-sec);
     box-shadow: 0px 10px 15px -3px rgb(214, 204, 204);
 }
 
@@ -55,45 +54,31 @@ ul {
 
 li {
     float: left;
+    display: flex;
     text-align: center;
+    justify-content: center;
+
     margin: 10px;
     padding: 10px 15px;
-    border:1px solid var(--variable-color--ppal);
+    border:1px solid var(--variable-color-ppal);
     border-radius: 40px;
 }
  li:hover{
-    background-color: var(--variable-color--ppal);
+    background-color: var(--variable-color-ppal);
  }
 
 a{
+    font-size: 0.7rem;
     text-decoration: none;
-    color:#616161;
+    color: var(--variable-color-texto);
 }
 a:hover{
     color: white;
+    font-weight: bold;
 }
 
-
-
-/*---------------------------*/
-main{
-    width: var(--variable-ancho-ppal);
-    height: 80%;
-    background-color: var(--variable-color--sec);
-    margin-top: calc( var(--variable-alto-header) + 30px);  /*la suma del margin del header + margin para que se vea la sombra*/
-    margin-bottom: 30px;
-    border: 1px solid gray; /*dsps borrar, es solo de guía*/
-}
-
-/*-----------------------*/
-footer{
-    width: 100%;
-    height: 100px;
-    background-color: var(--variable-color--ppal)
-}
-
-
-/*------------------------------------------------*/
+/*******************************************************************/
+/* ---- media query HEADER -----------------*/
 @media (width<=900px) {
     header{
       display: none;
@@ -102,3 +87,85 @@ footer{
         margin-top: 30px;
     }
 }
+/*******************************************************************/
+
+
+/*----------------------- << MAIN >> ------------------------*/
+main{
+    width: 90%;
+    height: 80%; /*veerr*/
+    background-color: var(--variable-color-sec);
+   
+    margin-top: calc( var(--variable-alto-header) + 30px);  /*la suma del margin del header + margin para que se vea la sombra*/
+    margin-bottom: 30px;
+    border: 1px solid gray; /*dsps borrar, es solo de guía*/
+}
+
+/*-----  main - HOLA  -----*/
+.cont-hola{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hola-texto, .hola-texto-h3, .hola-texto-h1, .hola-texto-p, .hola-btn{
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.hola-texto-h3{
+    font-size: 1.5rem;
+}
+.hola-texto-h1{
+    color: var(--variable-color-ppal);
+    font-size: 2.2rem;
+}
+.hola-texto-p{
+    color: var(--variable-color-texto);
+    font-size: 0.8rem;
+}
+.hola-btn{
+    margin: 10px;
+    padding: 10px 15px;
+    border:1px solid var(--variable-color-ppal);
+    background-color: var(--variable-color-ppal);
+    color: white;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+.hola-img{
+    width: 90%;
+    margin: 40px 10px;
+    border: 1px solid black;
+}
+
+
+
+/*----------------------- << FOOTER >> -----------------------*/
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: var(--variable-color-ppal)
+}
+
+
+
+
+
+/*******************************************************************/
+/* ---- media query MAIN -----------------*/
+@media(650px <= width <=900px){
+    main{
+        Width: 90%;
+        height: 80%;
+    }
+}
+
+@media(width>900px ){
+    main{
+        width: var(--variable-ancho-ppal);
+        height: 80%;
+    }
+}
+/*******************************************************************/
