@@ -123,7 +123,7 @@ main{
 }
 .hola-texto-h1{
     color: var(--variable-color-ppal);
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 .hola-texto-p{
     width: 90%;
@@ -152,7 +152,7 @@ main{
 
 @media(width>550px ){ /*todavía esta en CELU, pero igual hay un pequeño cambio*/
     .hola-texto-h1{         /*mi nombre en main-hola*/
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
     .hola-texto-p,.hola-img{ /*quedan fijos, antes era 80%*/
         width: 440px;
@@ -189,28 +189,41 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    height:100px;
     background-color: #F6F7FB;
     text-align: center;
     min-height: calc(100vh - var(--variable-alto-header) - 38px);
+    padding: 110px 10px;
 }
 
+.conocim-texto-h1{
+    color: var(--variable-color-ppal);
+    font-size: 2.3rem;
+    padding: 10px 0px;
+}
+.conocim-texto-p{
+    font-size: 0.8rem;
+    padding: 10px 0px;
+}
 .conocim-lenguaje{
-    width: 100%;
-    margin: 20px;
+    width: 50%;
+    margin: 10px;
     padding: 30px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
     border: 1px solid rgb(194, 187, 187);
     border-radius: 10px;
     background-color: #FFFFFF;
 }
-.conocim-lenguajes:hover{
+.conocim-lenguaje:hover{
     border-color: var(--variable-color-ppal);
+    color: var(--variable-color-ppal);
 }
-.img-icn{
-    width: 70px;
-    
+.conocim-lenguaje-icn{
+    width: 50px;
+    margin: 10px;
 }
 
 
