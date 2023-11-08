@@ -194,7 +194,9 @@ main{
     min-height: calc(100vh - var(--variable-alto-header) - 38px);
     padding: 110px 10px;
 }
-
+.conocim-texto{
+    margin-bottom: 40px;
+}
 .conocim-texto-h1{
     color: var(--variable-color-ppal);
     font-size: 2.3rem;
@@ -204,15 +206,23 @@ main{
     font-size: 0.8rem;
     padding: 10px 0px;
 }
-.conocim-lenguaje{
-    width: 50%;
-    margin: 10px;
-    padding: 30px;
+
+
+.cont-conocim-lenguaje{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+}
+.conocim-lenguaje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
+    width: 50%;
+    margin: 10px;
+    padding: 30px;    
     border: 1px solid rgb(194, 187, 187);
     border-radius: 10px;
     background-color: #FFFFFF;
@@ -226,6 +236,37 @@ main{
     margin: 10px;
 }
 
+/*******************************************************************/
+/* ---- media query MAIN  - Conocimienots ---------------*/
+@media(550px <= width <=900px){ /*para tablet*/
+
+    .cont-conocim-lenguaje{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .conocim-lenguaje{
+        width: 40%;
+        height: 200px;
+    }
+}
+
+@media(width >900px){ /*para pc*/
+    .cont-conocim-lenguaje{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .conocim-lenguaje{
+        width: 30%;
+        height: 200px;
+    }
+}
+/*******************************************************************/
 
 
 
