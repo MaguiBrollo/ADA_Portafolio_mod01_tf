@@ -185,12 +185,33 @@ main{
 
 
 /*--------------------  main - conocimientos  -----------------------*/
-.cont-conocim{
+.sección-conociento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     height:100px;
-    background-color: #e2e4eb;
+    background-color: #F6F7FB;
     text-align: center;
+    min-height: calc(100vh - var(--variable-alto-header) - 38px);
 }
 
+.conocim-lenguaje{
+    width: 100%;
+    margin: 20px;
+    padding: 30px;
+
+    border: 1px solid rgb(194, 187, 187);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+.conocim-lenguajes:hover{
+    border-color: var(--variable-color-ppal);
+}
+.img-icn{
+    width: 70px;
+    
+}
 
 
 
