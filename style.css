@@ -3,7 +3,7 @@
     --variable-color-ppal:#EE457A;
     --variable-color-sec: #FFFFFF;
     --variable-color-texto:#616161;
-    --variable-ancho-ppal:1200px;
+    --variable-ancho-ppal:1300px;
     --variable-alto-header: 100px;
 }  
 
@@ -65,7 +65,11 @@ li {
     border:1px solid var(--variable-color-ppal);
     border-radius: 40px;
 }
- li:hover{
+li:nth-child(4){
+    background-color: var(--variable-color-ppal);
+}
+
+li:hover{
     background-color: var(--variable-color-ppal);
  }
 
@@ -90,17 +94,13 @@ a:hover{
 
 
 /*----------------------- << MAIN >> ------------------------*/
-main{
-    width: 90%;
-    background-color: var(--variable-color-sec);
-   
-    margin-top: calc( var(--variable-alto-header) + 50px);  /*la suma del margin del header + margin para que se vea la sombra*/
-    margin-bottom: 30px;
-    border: 1px solid gray; /*dsps borrar, es solo de guía*/
-}
 
 /*--------------------  main - HOLA  -----------------------*/
 .seccion-hola{
+    width: 100%;
+    background-color: var(--variable-color-sec);
+    margin-top: calc( var(--variable-alto-header) + 50px);  /*la suma del margin del header + margin para que se vea la sombra*/
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,12 +155,12 @@ main{
         font-size: 2.6rem;
     }
     .hola-texto-p,.hola-img{ /*quedan fijos, antes era 80%*/
-        width: 440px;
+        width: 500px;
     }
 }
 
 @media(width>1100px ){  /*para tablet y pc*/
-    main{
+    .seccion-hola{
         width: 100%;  /*va creciendo hasta el max-width*/
         max-width: var(--variable-ancho-ppal);
 
@@ -186,12 +186,13 @@ main{
 
 /*--------------------  main - conocimientos  -----------------------*/
 .sección-conociento{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #F6F7FB;
     text-align: center;
-    min-height: calc(100vh - var(--variable-alto-header) - 38px);
+    min-height: calc(100vh - var(--variable-alto-header)+30px);
     padding: 80px 10px;
 }
 .conocim-texto{
@@ -240,7 +241,7 @@ main{
 }
 
 /*******************************************************************/
-/* ---- media query MAIN  - Conocimienots ---------------*/
+/* ---- media query MAIN  - Conocimientos ---------------*/
 @media(550px <= width <=900px){ /*para tablet*/
 
     .cont-conocim-lenguaje{
@@ -261,6 +262,7 @@ main{
 @media(width >900px){ /*para pc*/
     .cont-conocim-lenguaje{
         width: 100%;
+        max-width: calc(var(--variable-ancho-ppal) - 200px);
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -276,20 +278,58 @@ main{
 
 /*--------------------  main - alguien  -----------------------*/
 .seccion-alguien{
+    width: 100%;
     background-color: var(--variable-color-ppal);
+    padding: 130px 0px;
+    display: flex;
+    justify-content: center; 
+}
+.cont-alguien{
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .alguien-img-comillas{
     width: 150px;
-    margin: 100px 0px;
 }
-
 .alguien-texto{
-    font-size: 1.2rem;
-
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 70px 0px;
+    color: white;
 }
+
+.alguien-texto-p{
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 50px 0px;
+    color: white;
+}
+
+/*******************************************************************/
+/* ---- media query MAIN  - Conocimientos ---------------*/
+@media(width >900px){ /*para pc*/
+    .cont-alguien{
+        max-width: calc(var(--variable-ancho-ppal) - 200px);
+    }
+}
+
+/*******************************************************************/
+
+
+
+
+
+/*--------------------  main - proyectos  -----------------------*/
+.seccion-proyectos{
+    width: 100%;
+    background-color: var(--variable-color-sec);
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center; 
+}
+
 
 
 /*----------------------- << FOOTER >> -----------------------*/
