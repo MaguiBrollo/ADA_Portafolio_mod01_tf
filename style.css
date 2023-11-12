@@ -2,7 +2,10 @@
 :root{
     --variable-color-ppal:#EE457A;
     --variable-color-sec: #FFFFFF;
+    --variable-color-ter:#F6F7FB;
+
     --variable-color-texto:#616161;
+
     --variable-ancho-ppal:1300px;
     --variable-alto-header: 100px;
 }  
@@ -123,13 +126,13 @@ a:hover{
 }
 .hola-texto-h1{
     color: var(--variable-color-ppal);
-    font-size: 2.4rem;
+    font-size: 2.7rem;
 }
 .hola-texto-p{
     width: 90%;
     margin: 40px 10px;
     color: var(--variable-color-texto);
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 .hola-btn{
     margin: 10px;
@@ -152,7 +155,7 @@ a:hover{
 
 @media(width>550px ){ /*todavía esta en CELU, pero igual hay un pequeño cambio*/
     .hola-texto-h1{         /*mi nombre en main-hola*/
-        font-size: 2.6rem;
+        font-size: 2.9rem;
     }
     .hola-texto-p,.hola-img{ /*quedan fijos, antes era 80%*/
         width: 500px;
@@ -181,7 +184,29 @@ a:hover{
 /*******************************************************************/
 
 
-
+/*-------------------- COMÚN A TÍTULOS Y SUBTÍTULOS ------------------*/
+.cont-texto{ /*para todos los cont-titulos-h1 y p iguales*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.texto-h1{   /*para todos los titulos iguales*/
+    color: var(--variable-color-ppal);
+    font-size: 2.5rem;
+}
+.texto-p{  /*para todos los textos debajo de "texto-h1"*/
+    width: 80%;
+    max-width: 700px;
+    padding: 30px 0px 10px 0px;
+    text-align: center;
+}
+@media(width>550px ){ /*todavía esta en CELU, pero igual hay un pequeño cambio*/
+    .texto-h1{         /*mi nombre en main-hola*/
+        font-size: 2.9rem;
+    }
+}
+/* ------------------ */
 
 
 /*--------------------  main - conocimientos  -----------------------*/
@@ -190,27 +215,11 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F6F7FB;
-    text-align: center;
-    min-height: calc(100vh - var(--variable-alto-header)+30px);
+    background-color: var(--variable-color-ter);
     padding: 80px 10px;
+    /* min-height: calc(100vh - var(--variable-alto-header)+30px);  */
 }
-.conocim-texto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-}
-.conocim-texto-h1{
-    color: var(--variable-color-ppal);
-    font-size: 2.3rem;
-}
-.conocim-texto-p{
-    width: 80%;
-    max-width: 700px;
-    font-size: 1rem;
-    padding: 30px 0px 10px 0px;
-}
+   
 
 .cont-conocim-lenguaje{
     width: 100%;
@@ -320,16 +329,41 @@ a:hover{
 
 
 
-
 /*--------------------  main - proyectos  -----------------------*/
 .seccion-proyectos{
     width: 100%;
     background-color: var(--variable-color-sec);
-    padding: 100px 0px;
     display: flex;
-    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 10px;
+    
 }
 
+.cont-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 90%;
+    border: 1px solid black;
+}
+.proyecto{
+    text-align: center;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+a .proyecto{
+    text-decoration: none;
+    color: #2e2e31;
+    display: block;
+}
+
+.proy-img{
+    display: block;
+    width: 90%;
+}
 
 
 /*----------------------- << FOOTER >> -----------------------*/
