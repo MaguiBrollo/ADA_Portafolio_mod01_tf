@@ -220,7 +220,6 @@ a:hover{
     /* min-height: calc(100vh - var(--variable-alto-header)+30px);  */
 }
    
-
 .cont-conocim-lenguaje{
     width: 100%;
     display: flex;
@@ -254,8 +253,6 @@ a:hover{
 @media(550px <= width <=900px){ /*para tablet*/
 
     .cont-conocim-lenguaje{
-        width: 100%;
-        height: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -341,29 +338,49 @@ a:hover{
 }
 
 .cont-proyectos {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between; 
-    width: 90%;
+    align-items: center;   
     border: 1px solid black;
 }
+
 .proyecto{
-    text-align: center;
-    border: 1px solid black;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 95%;
+    
+    padding: 10px;  
+    margin: 20px 0px;
+    border: 1px solid rgb(194, 187, 187);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+.proyecto:hover{
+    border-color: var(--variable-color-ppal);
+    color: var(--variable-color-ppal);
 }
 
 a .proyecto{
     text-decoration: none;
     color: #2e2e31;
-    display: block;
 }
 
 .proy-img{
-    display: block;
-    width: 90%;
+    width: 100%;
+    aspect-ratio: 4/3;
 }
+.proy-p{
+    height: 10%;
+    margin: 10px 0px;
+    font-size: 1.3rem;
+}
+
+
+
 
 
 /*----------------------- << FOOTER >> -----------------------*/
