@@ -151,7 +151,7 @@ a:hover{
 }
 
 /*******************************************************************/
-/* ---- media query MAIN -----------------*/
+/* ---- media query  main - HOLA -----------------*/
 
 @media(width>550px ){ /*todavía esta en CELU, pero igual hay un pequeño cambio*/
     .hola-texto-h1{         /*mi nombre en main-hola*/
@@ -250,9 +250,10 @@ a:hover{
 
 /*******************************************************************/
 /* ---- media query MAIN  - Conocimientos ---------------*/
-@media(550px <= width <=900px){ /*para tablet*/
+@media(width >=550px){ /*para tablet*/
 
     .cont-conocim-lenguaje{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -260,19 +261,14 @@ a:hover{
     }
     .conocim-lenguaje{
         width: 40%;
-        max-width: 250px;
+        max-width: 280px;
         height: 200px;
     }
 }
 
 @media(width >900px){ /*para pc*/
     .cont-conocim-lenguaje{
-        width: 100%;
         max-width: calc(var(--variable-ancho-ppal) - 200px);
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
     }
     .conocim-lenguaje{
         width: 30%; 
@@ -379,22 +375,34 @@ a .proyecto{
 
 /*******************************************************************/
 /* ---- media query MIS PROYECTOS ---------------*/
-@media(600px <= width <=900px){ /*para tablet*/
+@media(width >=600px){ /*para tablet*/
 
     .cont-proyectos{
+        width: 100%; 
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: flex-start;
     }
     .proyecto{
-        width: 46%;
+        width: calc(100%/2 - 10px*2); 
         margin: 10px;
     }
     .proy-p{
         font-size:0.9rem;
     }
 }
+
+@media(width >900px){ /*para pc*/
+    .cont-proyectos{
+        max-width: var(--variable-ancho-ppal);
+    }
+    .proyecto{
+        width: calc(100%/3 - 10px*2); 
+    } 
+}
+/*******************************************************************/
+
 
 
 /*----------------------- << FOOTER >> -----------------------*/
