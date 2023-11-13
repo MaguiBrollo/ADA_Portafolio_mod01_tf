@@ -334,7 +334,6 @@ a:hover{
     flex-direction: column;
     align-items: center;
     padding: 80px 10px;
-    
 }
 
 .cont-proyectos {
@@ -342,7 +341,6 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;   
-    border: 1px solid black;
 }
 
 .proyecto{
@@ -351,8 +349,7 @@ a:hover{
     align-items: center;
     justify-content: space-between;
     
-    width: 95%;
-    
+    width: 100%;
     padding: 10px;  
     margin: 20px 0px;
     border: 1px solid rgb(194, 187, 187);
@@ -377,10 +374,27 @@ a .proyecto{
     height: 10%;
     margin: 10px 0px;
     font-size: 1.3rem;
+    font-weight: bold;
 }
 
+/*******************************************************************/
+/* ---- media query MIS PROYECTOS ---------------*/
+@media(600px <= width <=900px){ /*para tablet*/
 
-
+    .cont-proyectos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .proyecto{
+        width: 46%;
+        margin: 10px;
+    }
+    .proy-p{
+        font-size:0.9rem;
+    }
+}
 
 
 /*----------------------- << FOOTER >> -----------------------*/
