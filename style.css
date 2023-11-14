@@ -408,12 +408,11 @@ a .proyecto{
 
 .seccion-contactame{
     width: 100%;
-    background-color: var(--variable-color-sec);
+    background-color: var(--variable-color-ter);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 80px 10px;
-    border: 1px solid gray;
 }
 .izq{
     align-items: flex-start;
@@ -423,12 +422,12 @@ a .proyecto{
 }
 
 .redes{
+    width: 100%;
+    min-width: 300px;
     display: flex;
     align-items: center;
     margin: 20px;
-    font-size: 1rem;
-
-    border: 1px solid gray;
+    font-size: 1.2rem;
 }
 .redes:hover{
     border-color: var(--variable-color-ppal);
@@ -439,12 +438,75 @@ a .proyecto{
     display: block;
     width: 50px;
     height: 50px;
+}
+.redes-twitter{
+    background: url("img/c-twitter.png") center center no-repeat;
+}
+.redes-twitter:hover{
+    background: url("img/c-twitter2.png") center center no-repeat;
+}
+
+.redes-Github{
+    background: url("img/c-github.png") center center no-repeat;
+}
+.redes-Github:hover{
+    background: url("img/c-github2.png") center center no-repeat;
+}
+.redes-linked{
+    background: url("img/c-linkedin.png") center center no-repeat;
+}
+.redes-linked:hover{
+    background: url("img/c-linkedin2.png") center center no-repeat;
+}
+.redes-mail{
     background: url("img/c-mail.png") center center no-repeat;
 }
-.redes-p:hover{
+.redes-mail:hover{
     background: url("img/c-mail2.png") center center no-repeat;
 }
 
+
+.cont-escribime{
+    padding: 80px 10px;
+}
+
+
+/*******************************************************************/
+/* ---- media query CONTÁCTAME ---------------*/
+@media(width >=550px){ /*para tablet*/
+    .redes-sociales{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .redes{
+        width: calc(100%/2 - 20px*2);
+    }
+}
+
+@media(width >=1000px){ /*para tablet*/
+    .redes-sociales{
+        width: 50%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: colum;
+    }
+    .redes-sociales{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion-contactame{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cont-contactame, .cont-escribime{
+        width: 50%;
+        height: 700px;
+    }
+}
 
 /*----------------------- << FOOTER >> -----------------------*/
 footer{
