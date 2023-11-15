@@ -1,8 +1,7 @@
-# ADA_Portafolio_mod01_tf
 ADA Portafolio - TF Módulo1 [20va Desarrollo Frontend -Sept2023]
 
 
-<h1 align="center"> GitHub de Magui</h1>
+<h1 align="center"> Portfolio de Magui Brollo</h1>
 
 <h3>Mi permanente desafío de aprender más sobre el maravilloso mundo de la programación.<br></h3>
 
