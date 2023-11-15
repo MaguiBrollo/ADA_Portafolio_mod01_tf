@@ -620,3 +620,36 @@ footer{
 /*******************************************************************/
 
 
+
+
+.fa-linkedin-in,.fa-envelope,.fa-github-alt,.fa-twitter{
+    color: #EE457A;
+    background-color: var(--variable-color-sec);
+}
+.fa-twitter:hover{
+    color: white;
+    background-color: #EE457A;
+}
+.fa-github-alt:hover{
+    color: white;
+    background-color: #EE457A;
+}
+
+.fa-envelope:hover{
+    color: white;
+    background-color: #EE457A;
+}
+
+.fa-linkedin-in:hover{
+    color: white;
+    background-color: #EE457A;
+}
+.iconos-footer{   
+        width: 2.7rem;
+        height: 2.7rem;
+        font-size: 2rem;
+        vertical-align: center;
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 50%;
+}
