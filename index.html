@@ -43,7 +43,7 @@
     <section class="sección-conociento">
         <div class="cont-texto">
             <h1 class="texto-h1">Mis Conocimientos</h1>
-            <p class="texto-p">Conocimientos adquiridos durante la capacitación de Ada ITW, Desarrollo Frontend. 
+            <p class="texto-p">Conocimientos adquiridos durante la capacitación de Ada ITW, Desarrollo Frontend.
                 Desde Septiempbre 2023 hasta junio 2024.</p>
         </div>
 
@@ -94,7 +94,7 @@
     <section class="seccion-proyectos">
         <div class="cont-texto">
             <h1 class="texto-h1">Mis proyectos</h1>
-            <p class="texto-p">Proyectos realizados durante la capacitación de Ada ITW, Desarrollo Frontend. 
+            <p class="texto-p">Proyectos realizados durante la capacitación de Ada ITW, Desarrollo Frontend.
                 Desde Septiempbre 2023 hasta junio 2024.</p>
         </div>
 
@@ -134,57 +134,89 @@
                 <img src="img/proy_peliculas.svg" alt="Portfolio" class="proy-img">
                 <p class="proy-p">Buscador de películas</p>
             </a>
-            
+
         </div>
 
     </section>
 
     <!------------------ CONTÁCTAME --------------->
     <section class="seccion-contactame">
-        
-        <div class="cont-contactame">
-           
-            <div class="cont-texto izq">
-                <h1 class="texto-h1">Contáctame</h1>
-                <p class="texto-p izq">Para saber más sobre mí, te invito a que te unas a mis redes sociales. 
-                    También puedes enviar un correo electrónico para suscribirte a mi Newsletter.</p>
+        <div class="cont-contactame-escribeme">
+            <div class="cont-contactame">
+
+                <div class="cont-texto izq">
+                    <h1 class="texto-h1">Contáctame</h1>
+                    <p class="texto-p izq">Para saber más sobre mí, te invito a que te unas a mis redes sociales.
+                        También puedes enviar un correo electrónico para suscribirte a mi Newsletter.</p>
+                </div>
+
+                <div class="redes-sociales">
+                    <a href="#" target="_blank" class="redes">
+                        <p aria-hidden="true" class="redes-p redes-twitter"> </p>
+                        @maguieb
+                    </a>
+
+                    <a href="#" target="_blank" class="redes">
+                        <p aria-hidden="true" class="redes-p redes-Github"> </p>
+                        MaguiBrollo
+                    </a>
+
+                    <a href="#" target="_blank" class="redes">
+                        <p aria-hidden="true" class="redes-p redes-linked"> </p>
+                        maguieb
+                    </a>
+
+                    <a href="#" target="_blank" class="redes">
+                        <p aria-hidden="true" class="redes-p redes-mail"> </p>
+                        @maguieb@gmail.com
+                    </a>
+
+                </div>
             </div>
 
-            <div class="redes-sociales">
-                <a href="#" target="_blank" class="redes">
-                    <p aria-hidden="true" class="redes-p redes-twitter"> </p>
-                    @maguieb
-                </a>
+            <div class="cont-escribime izq">
 
-                <a href="#" target="_blank" class="redes">
-                    <p aria-hidden="true" class="redes-p redes-Github"> </p>
-                    MaguiBrollo
-                </a>
+                <div class="cont-texto izq">
+                    <h1 class="texto-h1">Escríbime</h1>
+                </div>
 
-                <a href="#" target="_blank" class="redes">
-                    <p aria-hidden="true" class="redes-p redes-linked"> </p>
-                    maguieb
-                </a>
+                <form action="gracias.html">
+                    <div class="formulario">
+                        <div class="cont-nombre-apellido">
+                            <div class="cont-label-input">
+                                <label for="campo_nombre">Nombre*</label>
+                                <!-- label for="...", debe coincidir con el id del input -->
+                                <input type="text" placeholder="Tu nombre" name="nombre" class="form_input"
+                                    id="campo_nombre" required />
+                            </div>
 
-                <a href="#" target="_blank" class="redes">
-                    <p aria-hidden="true" class="redes-p redes-mail"> </p>
-                    @maguieb@gmail.com
-                </a>
-                
+                            <div class="cont-label-input">
+                                <label for="campo_apellido">Apellido*</label>
+                                <input type="text" placeholder="Tu apellido" name="apellido" class="form_input"
+                                    id="campo_apellido" required />
+                            </div>
+                        </div>
+
+                        <div class="cont-label-input">
+                            <label for="campo_email">E-mail*</label>
+                            <input type="email" placeholder="Tu e-mail" name="email" class="form_input" id="campo_email"
+                                required />
+                        </div>
+
+                        <div class="cont-label-input">
+                            <label for="campo_mensaje">Mensaje*</label>
+                            <textarea name="Mensaje" class="form_input" cols="30" rows="10" id="campo_mensaje" placeholder="Escribe tu mensaje aquí."></textarea>
+                        </div>
+
+                        <a href="gracias.html" class="hola-btn">Enviar</a>
+                    </div>
+                </form>
             </div>
-        </div>
-
-        <div class="cont-escribime izq">
-            
-            <div class="cont-texto izq">
-                <h1 class="texto-h1">Escribime</h1>
-            </div>
-        
         </div>
     </section>
 
 
-   <!------------------ FOOTER --------------->
+    <!------------------ FOOTER --------------->
     <footer>
         <h1>footer</h1>
     </footer>

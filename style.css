@@ -404,16 +404,22 @@ a .proyecto{
 /*******************************************************************/
 
 
-/*--------------------  main - contáctame  -----------------------*/
+/*--------------------  main - contáctame/escíbeme  -----------------------*/
 
-.seccion-contactame{
+.cont-contactame-escribeme{
     width: 100%;
-    background-color: var(--variable-color-ter);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 10px;
+    padding-top: 80px;
+    padding: 20px
 }
+
+.cont-contactame, .cont-escribime{
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
 .izq{
     align-items: flex-start;
     width: 95%;
@@ -423,11 +429,10 @@ a .proyecto{
 
 .redes{
     width: 100%;
-    min-width: 300px;
     display: flex;
     align-items: center;
-    margin: 20px;
-    font-size: 1.2rem;
+    margin: 10px;
+    font-size: 1rem;
 }
 .redes:hover{
     border-color: var(--variable-color-ppal);
@@ -466,13 +471,46 @@ a .proyecto{
 }
 
 
-.cont-escribime{
-    padding: 80px 10px;
+/*------------ escribeme -----------------*/
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cont-nombre-apellido{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cont-label-input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+.form_input:nth-of-type(1){
+    margin-right: 5px;
+}
+label{
+    margin-bottom: 10px;
+}
+input{
+    height: 50px;
+    border-radius: 25px;
+}
+.form_input{
+    border: 1px solid rgb(194, 187, 187);
+    background-color: var(--variable-color-ter);
+    padding-left: 15px;
+}
+textarea{
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-
 /*******************************************************************/
-/* ---- media query CONTÁCTAME ---------------*/
+/* ---- media query   CONTÁCTAME / Escribime ---------------*/
 @media(width >=550px){ /*para tablet*/
     .redes-sociales{
         display: flex;
@@ -480,33 +518,50 @@ a .proyecto{
         flex-direction: row;
     }
     .redes{
-        width: calc(100%/2 - 20px*2);
+        width: 46%;
     }
+    .cont-nombre-apellido{
+        flex-direction: row;
+    }
+  
 }
 
-@media(width >=1000px){ /*para tablet*/
-    .redes-sociales{
-        width: 50%;
+@media(width >=900px){ /*para tablet*/
+    .seccion-contactame{
+        width: 100%;
         display: flex;
-        flex-wrap: nowrap;
-        flex-direction: colum;
+        justify-content: center;
+        background-color: var(--variable-color-ter);
     }
+    .cont-contactame-escribeme{
+        width: 90%;
+        max-width: var(--variable-ancho-ppal);
+        flex-direction: row;
+        border: 1px solid rgb(194, 187, 187);
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        margin: 200px 0px;
+    }
+   
     .redes-sociales{
         width: 100%;
+        min-width: 300px;
         display: flex;
         flex-direction: column;
     }
 
-    .seccion-contactame{
-        display: flex;
-        flex-direction: row;
+    .redes{
+        width: 90%;
     }
-
+  
     .cont-contactame, .cont-escribime{
         width: 50%;
-        height: 700px;
+        height: 650px;
     }
 }
+
+
+
 
 /*----------------------- << FOOTER >> -----------------------*/
 footer{
