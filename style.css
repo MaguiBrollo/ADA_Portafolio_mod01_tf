@@ -46,18 +46,18 @@ header{
     box-shadow: 0px 10px 15px -3px rgb(214, 204, 204);
 }
 
-nav{
+.nav{
     width: var(--variable-ancho-ppal);
     display: flex;
     justify-content: end;
 }
 
-ul {
+ul{
     display: inline;
     list-style-type: none;     /*saca viñeta  a la lista*/
 }
 
-li {
+.li-header {
     float: left;
     display: flex;
     text-align: center;
@@ -68,11 +68,11 @@ li {
     border:1px solid var(--variable-color-ppal);
     border-radius: 40px;
 }
-li:nth-child(4){
+.li-header:nth-child(4){
     background-color: var(--variable-color-ppal);
 }
 
-li:hover{
+.li-header:hover{
     background-color: var(--variable-color-ppal);
  }
 
@@ -81,7 +81,7 @@ a{
     text-decoration: none;
     color: var(--variable-color-texto);
 }
-a:hover{
+.a-header:hover{
     color: white;
     font-weight: bold;
 }
@@ -566,6 +566,57 @@ textarea{
 /*----------------------- << FOOTER >> -----------------------*/
 footer{
     width: 100%;
-    height: 100px;
-    background-color: var(--variable-color-ppal)
+    background-color: var(--variable-color-ppal);
+    padding: 100px 10px;
+    text-align: center;
 }
+
+.ul-footer{
+    display: inline;
+    display: flex;
+    justify-content: center;
+    
+}
+.li-footer{
+    margin: 10px;
+}
+
+.a-footer-redes{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+}
+.h3-footer,.a-footer{
+    color: white;
+    font-size: 1.1rem;
+}
+
+.footer-p{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+
+    color: white;
+    background-color: white;
+}
+.footer-twitter{
+    background: url("img/c-twitter3.png") center center no-repeat;
+}
+.footer-twitter:hover{
+    background: url("img/c-twitter2.png") center center no-repeat;
+}
+
+
+/*******************************************************************/
+/* ---- media query FOOTER -----------------*/
+@media (width<=700px) {
+    .nav-footer{
+      display: none;
+    }
+}
+/*******************************************************************/
+
+
