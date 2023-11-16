@@ -72,6 +72,11 @@ ul{
     background-color: var(--variable-color-ppal);
 }
 
+.li-header:nth-child(4):hover{
+    opacity: 0.8;
+}
+
+
 .li-header:hover{
     background-color: var(--variable-color-ppal);
  }
@@ -102,7 +107,7 @@ a{
 .seccion-hola{
     width: 100%;
     background-color: var(--variable-color-sec);
-    margin-top: calc( var(--variable-alto-header) + 50px);  /*la suma del margin del header + margin para que se vea la sombra*/
+    margin-top: calc( var(--variable-alto-header) + 90px);  /*la suma del margin del header + margin para que se vea la sombra*/
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -142,6 +147,9 @@ a{
     color: white;
     font-size: 0.8rem;
     border-radius: 40px;
+}
+.hola-btn:hover{
+    opacity: 0.8;
 }
 
 .hola-img{
@@ -217,7 +225,8 @@ a{
     align-items: center;
     background-color: var(--variable-color-ter);
     padding: 80px 10px;
-    /* min-height: calc(100vh - var(--variable-alto-header)+30px);  */
+
+    scroll-margin-top: var(--variable-alto-header); /*al ir a la sección con un link, no quede muy arriba*/
 }
    
 .cont-conocim-lenguaje{
@@ -330,6 +339,8 @@ a{
     flex-direction: column;
     align-items: center;
     padding: 80px 10px;
+
+    scroll-margin-top: var(--variable-alto-header);
 }
 
 .cont-proyectos {
@@ -439,35 +450,44 @@ a .proyecto{
     color: var(--variable-color-ppal);
 }
 
-.redes-p{
-    display: block;
-    width: 50px;
-    height: 50px;
-}
-.redes-twitter{
-    background: url("img/c-twitter.png") center center no-repeat;
-}
-.redes-twitter:hover{
-    background: url("img/c-twitter2.png") center center no-repeat;
+
+/*iconos de las redes sociales - TAMBIÉN ESTAÉ EN FOOTER*/
+.fa-linkedin-in,.fa-envelope,.fa-github-alt,.fa-twitter{
+    color: #EE457A;
+    background-color: var(--variable-color-sec);
 }
 
-.redes-Github{
-    background: url("img/c-github.png") center center no-repeat;
+.fa-twitter::before{
+    vertical-align: center;
 }
-.redes-Github:hover{
-    background: url("img/c-github2.png") center center no-repeat;
+.fa-twitter:hover{
+    color: white;
+    background-color: #EE457A;
 }
-.redes-linked{
-    background: url("img/c-linkedin.png") center center no-repeat;
+.fa-github-alt:hover{
+    color: white;
+    background-color: #EE457A;
 }
-.redes-linked:hover{
-    background: url("img/c-linkedin2.png") center center no-repeat;
+.fa-envelope:hover{
+    color: white;
+    background-color: #EE457A;
 }
-.redes-mail{
-    background: url("img/c-mail.png") center center no-repeat;
+.fa-linkedin-in:hover{
+    color: white;
+    background-color: #EE457A;
 }
-.redes-mail:hover{
-    background: url("img/c-mail2.png") center center no-repeat;
+.iconos-footer{   
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 1.5rem;
+
+        border: 1px solid white;
+        border-radius: 50%;
+}
+i.fa-brands,i.fa-solid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -518,7 +538,7 @@ textarea{
         flex-direction: row;
     }
     .redes{
-        width: 46%;
+        width: 45%;
     }
     .cont-nombre-apellido{
         flex-direction: row;
@@ -592,24 +612,12 @@ footer{
     font-size: 1.1rem;
 }
 
-.footer-p{
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid white;
+/*LOS ESTILOS DE LOS ICONOS DE redes sociales 
+ESTAN MAS ARRIBA EN "CONTÁCTAME"*/
 
-    color: white;
-    background-color: white;
+.icocor2 { /* icono del corazón*/
+    font-size: 20px;
 }
-.footer-twitter{
-    background: url("img/c-twitter3.png") center center no-repeat;
-}
-.footer-twitter:hover{
-    background: url("img/c-twitter2.png") center center no-repeat;
-}
-
-
 /*******************************************************************/
 /* ---- media query FOOTER -----------------*/
 @media (width<=700px) {
@@ -618,38 +626,3 @@ footer{
     }
 }
 /*******************************************************************/
-
-
-
-
-.fa-linkedin-in,.fa-envelope,.fa-github-alt,.fa-twitter{
-    color: #EE457A;
-    background-color: var(--variable-color-sec);
-}
-.fa-twitter:hover{
-    color: white;
-    background-color: #EE457A;
-}
-.fa-github-alt:hover{
-    color: white;
-    background-color: #EE457A;
-}
-
-.fa-envelope:hover{
-    color: white;
-    background-color: #EE457A;
-}
-
-.fa-linkedin-in:hover{
-    color: white;
-    background-color: #EE457A;
-}
-.iconos-footer{   
-        width: 2.7rem;
-        height: 2.7rem;
-        font-size: 2rem;
-        vertical-align: center;
-        text-align: center;
-        border: 1px solid white;
-        border-radius: 50%;
-}
