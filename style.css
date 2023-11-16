@@ -71,14 +71,16 @@ ul{
 .li-header:nth-child(4){
     background-color: var(--variable-color-ppal);
 }
+.ultimo{
+    color: white;
+}
 
 .li-header:nth-child(4):hover{
     opacity: 0.8;
 }
 
-
 .li-header:hover{
-    background-color: var(--variable-color-ppal);
+    background-color: var(--variable-color-ppal); 
  }
 
 a{
@@ -88,7 +90,6 @@ a{
 }
 .a-header:hover{
     color: white;
-    font-weight: bold;
 }
 
 /*******************************************************************/
@@ -113,6 +114,9 @@ a{
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - var(--variable-alto-header) - 38px);
+
+    scroll-margin-top: calc(var(--variable-alto-header) + 40px); /*al ir a la sección con un link, no quede muy arriba*/
+
 }
 .cont-hola{
     display: flex;
@@ -147,6 +151,7 @@ a{
     color: white;
     font-size: 0.8rem;
     border-radius: 40px;
+    font-family: 'Lora', serif;
 }
 .hola-btn:hover{
     opacity: 0.8;
@@ -301,9 +306,12 @@ a{
     flex-direction: column;
     align-items: center;
 }
-.alguien-img-comillas{
-    width: 150px;
+
+.fa-quote-right{
+   font-size: 7rem;
+   color: var(--variable-color-sec);
 }
+
 .alguien-texto{
     font-size: 1.6rem;
     text-align: center;
@@ -450,6 +458,11 @@ a .proyecto{
     color: var(--variable-color-ppal);
 }
 
+a.redes:focus /*los "a" que tengan la clase "redes"*/
+{
+  box-shadow: 0px 0px 7px var(--variable-color-ppal);
+  border-radius: 20px;
+}
 
 /*iconos de las redes sociales - TAMBIÉN ESTAÉ EN FOOTER*/
 .fa-linkedin-in,.fa-envelope,.fa-github-alt,.fa-twitter{
@@ -527,6 +540,59 @@ input{
 textarea{
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+/* para que se pueda observar el Borde verde/rojo en cada input del form*/
+a.redes:focus,
+.form_input:focus,
+textarea:focus
+{
+  box-shadow: 0px 0px 7px var(--variable-color-ppal);
+  outline: 0;
+}
+
+input:valid:focus,
+textarea:valid:focus {
+  box-shadow: 0px 0px 5px #88c459;
+}
+
+input:invalid:not(:placeholder-shown):focus,
+textarea:invalid:not(:placeholder-shown):focus {
+  box-shadow: 0px 0px 5px #f5414f;
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border: 1px solid #f5414f;
+}
+
+input:valid,
+textarea:valid {
+  border: 1px solid #88c459;
+}
+
+.icon-invalid,
+.icon-valid {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  transform: translateY(50%);
+}
+
+.icon-valid {
+  color: #88c459;
+}
+
+.icon-invalid {
+  color: #f5414f;
+}
+
+input:valid ~ .icon-valid,
+textarea:valid ~ .icon-valid,
+input:not(:placeholder-shown):invalid ~ .icon-invalid,
+textarea:not(:placeholder-shown):invalid ~ .icon-invalid {
+  display: block;
 }
 
 /*******************************************************************/

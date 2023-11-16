@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/yo.ico" type="image/png" />
 
-    <!-- para los iconois de redes sociales-->
+    <!-- para los iconos de redes sociales-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,10 +21,10 @@
     <header>
         <nav class="nav">
             <ul class="ul-header">
-                <li class="li-header"> <a href="#HOLA">HOLA</a> </li>
-                <li class="li-header"> <a href="#CONOCIMIENTOS">CONOCIMIENTOS</a> </li>
-                <li class="li-header"> <a href="#PROYECTOS">PROYECTOS</a> </li>
-                <li class="li-header"> <a href="#CONTACTO">CONTACTO</a> </li>
+                <li class="li-header"> <a class="a-header" href="#HOLA">HOLA</a> </li>
+                <li class="li-header"> <a class="a-header" href="#CONOCIMIENTOS">CONOCIMIENTOS</a> </li>
+                <li class="li-header"> <a class="a-header" href="#PROYECTOS">PROYECTOS</a> </li>
+                <li class="li-header"> <a class="a-header ultimo" href="#CONTACTO">CONTACTO</a> </li>
             </ul>
         </nav>
 
@@ -38,7 +38,7 @@
                 <h3 class="hola-texto-h3">Hola soy </h3>
                 <h1 class="hola-texto-h1">Magdalena Brollo</h1>
                 <p class="hola-texto-p">Estudiante de desarrollo Frontend y Backend, Profesora y Fotógrafa de hobby.</p>
-                <a href="#" class="hola-btn">LO QUE HAGO</a>
+                <a href="#PROYECTOS" class="hola-btn">LO QUE HAGO</a>
             </div>
 
             <img class="hola-img" src="img/creativa.svg" alt="">
@@ -91,7 +91,7 @@
     <!------------------ ALGUIEN (SOMEONE) --------------->
     <section class="seccion-alguien">
         <div class="cont-alguien">
-            <img class="alguien-img-comillas" src="img/img_comillas.png" alt="">
+            <i class="fa-solid fa-quote-right"></i>
             <p class="alguien-texto">“La única manera de hacer un trabajo genial es amar lo que haces” </p>
             <h3 class="alguien-texto-p">Steve Jobs</h3>
         </div>
@@ -187,7 +187,7 @@
                     <h1 class="texto-h1">Escríbime</h1>
                 </div>
 
-                <form>
+                <form action="https://submit-form.com/dZv3lZKLnN2eByG6HXaMj" method="POST">
                     <div class="formulario">
                         <div class="cont-nombre-apellido">
                             <div class="cont-label-input">
@@ -195,12 +195,19 @@
                                 <!-- label for="...", debe coincidir con el id del input -->
                                 <input type="text" placeholder="Tu nombre" name="nombre" class="form_input"
                                     id="campo_nombre" required />
+
+                                <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
+                                <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
                             </div>
 
                             <div class="cont-label-input">
                                 <label for="campo_apellido">Apellido*</label>
                                 <input type="text" placeholder="Tu apellido" name="apellido" class="form_input"
                                     id="campo_apellido" required />
+
+                                <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
+                                <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
+                                <i class="fa-solid fa-check icon-valid" aria-hidden="true"></i>
                             </div>
                         </div>
 
@@ -208,14 +215,19 @@
                             <label for="campo_email">E-mail*</label>
                             <input type="email" placeholder="Tu e-mail" name="email" class="form_input" id="campo_email"
                                 required />
+                                <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
+                                <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
                         </div>
 
                         <div class="cont-label-input">
                             <label for="campo_mensaje">Mensaje*</label>
-                            <textarea name="mensaje" class="form_input" cols="30" rows="10" id="campo_mensaje" placeholder="Escribe tu mensaje aquí."></textarea>
-                        </div>
+                            <textarea name="mensaje" class="form_input" cols="30" rows="10" id="campo_mensaje" 
+                             aria-label="mensaje"  placeholder="Escribe tu mensaje aquí."></textarea>
+                             <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
+                             <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
+                            </div>
 
-                        <a href="#" class="hola-btn">Enviar</a>
+                        <button type="submit" class="hola-btn">Enviar</button>
                     </div>
                 </form>
             </div>
