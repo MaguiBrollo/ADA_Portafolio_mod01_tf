@@ -594,8 +594,25 @@ textarea:not(:placeholder-shown):invalid ~ .icon-invalid {
 }
 
 
+.formulario-btn{
+    margin: 10px;
+    padding: 15px 25px;
+    border:1px solid var(--variable-color-ppal);
+    background-color: var(--variable-color-ppal);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 40px;
+    font-family: 'Lora', serif;
+    cursor: pointer;  /*para que aparezca la manito sobre el btn*/
+}
+.formulario-btn:hover{
+    opacity: 0.8;
+}
+
+
+
 /*******************************************************************/
-/* ---- media query   CONTÁCTAME / ESCÍBEME ---------------*/
+/* ---- media query   CONTÁCTAME / ESCRÍBEME ---------------*/
 @media(width >=550px){ /*para tablet*/
     .redes-sociales{
         display: flex;

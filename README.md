@@ -1,26 +1,55 @@
 ADA Portafolio - TF Módulo1 [20va Desarrollo Frontend -Sept2023]
 
+<p align="center">
+   <img src="img_readme/titulo.png" width="1100px" alt-text="Presentación">
+ </p>
 
-<h1 align="center"> Portfolio de Magui Brollo</h1>
+### **Proyecto: Portfolio Personal**
 
-<h3>Mi permanente desafío de aprender más sobre el maravilloso mundo de la programación.<br></h3>
+El presente proyecto contempla el desarrollo de un Portfolio Personal. Actividad realizada como Trabajo Final del primer módulo de HTML y CSS, de la capacitación de **"Desarrollo Frontend"** dictado por **ADA**.
+En el presente portfolio personal incluiré el conjunto de trabajos a realizar a lo largo de mi trayectoria en esta capacitación.
+<br>
 
-## **Qué hago:**
+###### Construcción:
+EL portfolio fue desarrollado utilizando HTML y CSS. Se encuentra dividido en secciones que brindan información precisa sobre mis conocimientos, mis proyectos e información de contacto, con link vistosos que redirigen a los sitios de las diferentes redes sociales. Además, cuenta con un formulario donde el visitante puede completar con sus datos para luego ser contactado.
 
- <ul>
-      <li>Estudiante de:
-            <ul>
-               <li>Frontend (HTML, CSS, JavaScript)</li>
-               <li>Backend (Java, Mysql, JPA Hibernate/EclipseLink)</li>
-               <li>Git/GitHub</li>
-            </ul>
-      </li>
-      <li>Profesora de Informáica</li>
-   </ul>
+### Secciones
+
+<ul>
+   <li>Presentación</li>
+   <li>Mis Conocimientos</li>
+   <li>Mis Proyectos</li>
+   <li>Contáctame</li>         
+</ul>
+
+
+##### Presentación:
+Mis datos personales.
 
 <p align="center">
-   <img src="https://github.com/MaguiBrollo/MaguiBrollo/assets/33180142/6175dda3-4d5d-4c8a-899e-cdfcdd54a498">
+   <img src="img_readme/captura01_hola.png" width="400px" alt-text="Presentación">
  </p>
+  
+
+##### Mis Conocimientos:
+Concoimientos adquiridos durante todo el trayecto de la capacitación.
+<p align="center">
+   <img src="img_readme/captura02_conocimientos.png" width="400px" alt-text="Mis Conocimientos">
+ </p>
+
+##### Mis Proyectos:
+Proyectos que iré desarrolando durante la capacitación Frontend de Ada.
+<p align="center">
+   <img src="img_readme/captura03_proyectos.png" width="400px" alt-text="Mis Proyectos">
+ </p>
+
+##### Contactos:
+Mis datos de contacto.
+<p align="center">
+   <img src="img_readme/captura04_contactos.png" width="400px" alt-text="Contactos">
+ </p>
+
+
 
 ## **Contactos:**
 
