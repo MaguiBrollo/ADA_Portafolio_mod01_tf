@@ -39,9 +39,11 @@ header{
     justify-content: center;
     align-items: center;
     
+    z-index: 5;   /* para que el header quede bien por encima de cualquier otro código*/
     position: fixed;  /*posicionamiento fijo (absoluto) */
     top:0;         /*top acompaña a fixed, significa que quede arriba c/r al browser */
 
+    
     background-color: var(--variable-color-sec);
     box-shadow: 0px 10px 15px -3px rgb(214, 204, 204);
 }
@@ -108,7 +110,7 @@ a{
 .seccion-hola{
     width: 100%;
     background-color: var(--variable-color-sec);
-    margin-top: calc( var(--variable-alto-header) + 90px);  /*la suma del margin del header + margin para que se vea la sombra*/
+    margin-top: calc( var(--variable-alto-header) + 90px);  /*margin del header + margin para que se vea la sombra*/
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -160,7 +162,7 @@ a{
 .hola-img{
     width: 95%;
     margin: 40px 10px;
-    border: 1px solid black;
+    
 }
 
 /*******************************************************************/
@@ -180,7 +182,7 @@ a{
         width: 100%;  /*va creciendo hasta el max-width*/
         max-width: var(--variable-ancho-ppal);
 
-        margin-top: calc( var(--variable-alto-header) + 40px);  /*la suma del margin del header + margin para que se vea la sombra*/
+        margin-top: calc( var(--variable-alto-header) + 40px);  /* margin del header + margin para que se vea la sombra*/
         margin-bottom: 40px;
     }
     .cont-hola{
@@ -207,6 +209,7 @@ a{
 .texto-h1{   /*para todos los titulos iguales*/
     color: var(--variable-color-ppal);
     font-size: 2.5rem;
+    text-align: center;
 }
 .texto-p{  /*para todos los textos debajo de "texto-h1"*/
     width: 80%;
@@ -307,7 +310,7 @@ a{
     align-items: center;
 }
 
-.fa-quote-right{
+.fa-quote-right{ /* class de la comilla doble, el nombre viene de la pg WEB */
    font-size: 7rem;
    color: var(--variable-color-sec);
 }
@@ -423,7 +426,7 @@ a .proyecto{
 /*******************************************************************/
 
 
-/*--------------------  main - contáctame/escíbeme  -----------------------*/
+/*--------------------  main - contáctame/escríbeme  -----------------------*/
 
 .cont-contactame-escribeme{
     width: 100%;
@@ -464,47 +467,34 @@ a.redes:focus /*los "a" que tengan la clase "redes"*/
   border-radius: 20px;
 }
 
-/*iconos de las redes sociales - TAMBIÉN ESTAÉ EN FOOTER*/
-.fa-linkedin-in,.fa-envelope,.fa-github-alt,.fa-twitter{
+.redes-sociales-span{
+    margin-left: 10px;
+}
+
+
+/* ---- iconos de las redes sociales  ----*/
+.redes:hover .iconos-redes-sociales{ /*para hover para todos los link*/
+    color: white;
+    background-color: #EE457A;
+}
+
+.iconos-redes-sociales{   
     color: #EE457A;
     background-color: var(--variable-color-sec);
-}
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1.5rem;
 
-.fa-twitter::before{
-    vertical-align: center;
-}
-.fa-twitter:hover{
-    color: white;
-    background-color: #EE457A;
-}
-.fa-github-alt:hover{
-    color: white;
-    background-color: #EE457A;
-}
-.fa-envelope:hover{
-    color: white;
-    background-color: #EE457A;
-}
-.fa-linkedin-in:hover{
-    color: white;
-    background-color: #EE457A;
-}
-.iconos-footer{   
-        width: 2.3rem;
-        height: 2.3rem;
-        font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
 
-        border: 1px solid white;
-        border-radius: 50%;
-}
-i.fa-brands,i.fa-solid{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 
-/*------------ escribeme -----------------*/
+/*------------ escríbeme -----------------*/
 .formulario{
     width: 100%;
     display: flex;
@@ -521,36 +511,44 @@ i.fa-brands,i.fa-solid{
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
+
+    /*flex-grow: 1;         /**/
+    position: relative;   /**/
 }
-.form_input:nth-of-type(1){
-    margin-right: 5px;
-}
+
 label{
     margin-bottom: 10px;
 }
 input{
-    height: 50px;
-    border-radius: 25px;
-}
-.form_input{
-    border: 1px solid rgb(194, 187, 187);
-    background-color: var(--variable-color-ter);
-    padding-left: 15px;
+    height: 50px; 
 }
 textarea{
-    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-/* para que se pueda observar el Borde verde/rojo en cada input del form*/
-a.redes:focus,
-.form_input:focus,
-textarea:focus
-{
-  box-shadow: 0px 0px 7px var(--variable-color-ppal);
-  outline: 0;
+.form_input{
+   
+    background-color: var(--variable-color-ter);
+    padding-left: 15px;
+
+    border: 0;          /**/
+    border-radius: 25px; /**/
+   
+    padding: 10px 15px; /**/
+    display: block;     /**/
+    
+    outline: none;      /*borra un borde negro*/
+    transition: 0.2s;   /**/
 }
 
+.form_input:nth-of-type(1){
+    margin-right: 5px;
+}
+.form_input:focus {
+  box-shadow: 0px 0px 5px var(--variable-color-ppal);
+}
+
+/* para que se pueda observar el Borde verde/rojo en cada input del form*/
 input:valid:focus,
 textarea:valid:focus {
   box-shadow: 0px 0px 5px #88c459;
@@ -595,8 +593,9 @@ textarea:not(:placeholder-shown):invalid ~ .icon-invalid {
   display: block;
 }
 
+
 /*******************************************************************/
-/* ---- media query   CONTÁCTAME / Escribime ---------------*/
+/* ---- media query   CONTÁCTAME / ESCÍBEME ---------------*/
 @media(width >=550px){ /*para tablet*/
     .redes-sociales{
         display: flex;
@@ -678,12 +677,33 @@ footer{
     font-size: 1.1rem;
 }
 
-/*LOS ESTILOS DE LOS ICONOS DE redes sociales 
-ESTAN MAS ARRIBA EN "CONTÁCTAME"*/
 
-.icocor2 { /* icono del corazón*/
+/*--------------- iconos de las redes sociales ----------------  */
+.iconos-footer{   
+    color: #EE457A;
+    background-color: var(--variable-color-sec);
+
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconos-footer:hover{
+    color: white;
+    background-color: #EE457A;
+}
+
+
+/* ----------- icono del corazón  -------*/
+.icocor2 { 
     font-size: 20px;
 }
+
 /*******************************************************************/
 /* ---- media query FOOTER -----------------*/
 @media (width<=700px) {
