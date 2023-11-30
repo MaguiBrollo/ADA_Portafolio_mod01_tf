@@ -23,10 +23,10 @@
     <header>
         <nav class="nav">
             <ul class="ul-header">
-                <li class="li-header"> <a class="a-header" href="#HOLA">HOLA</a> </li>
-                <li class="li-header"> <a class="a-header" href="#CONOCIMIENTOS">CONOCIMIENTOS</a> </li>
-                <li class="li-header"> <a class="a-header" href="#PROYECTOS">PROYECTOS</a> </li>
-                <li class="li-header"> <a class="a-header ultimo" href="#CONTACTO">CONTACTO</a> </li>
+                <li class="li-header"> <a tabindex="0" class="a-header" href="#HOLA">HOLA</a> </li>
+                <li class="li-header"> <a tabindex="0" class="a-header" href="#CONOCIMIENTOS">CONOCIMIENTOS</a> </li>
+                <li class="li-header"> <a tabindex="0" class="a-header" href="#PROYECTOS">PROYECTOS</a> </li>
+                <li class="li-header"> <a tabindex="0" class="a-header ultimo" href="#CONTACTO">CONTACTO</a> </li>
             </ul>
         </nav>
 
@@ -39,7 +39,7 @@
                 <h3 class="hola-texto-h3">Hola soy </h3>
                 <h1 class="hola-texto-h1">Magdalena Brollo</h1>
                 <p class="hola-texto-p">Estudiante de desarrollo Frontend y Backend, Profesora y Fotógrafa de hobby.</p>
-                <a href="#PROYECTOS" class="hola-btn">LO QUE HAGO</a>
+                <a tabindex="0" href="#PROYECTOS" class="hola-btn">LO QUE HAGO</a>
             </div>
 
             <img class="hola-img" src="img/creativa.svg" alt="Creativa">
@@ -108,37 +108,37 @@
 
         <div class="cont-proyectos">
 
-            <a href="#" class="proyecto">
+            <a tabindex="0" href="#" class="proyecto">
                 <img src="img/proy_portfolio.png" alt="Portfolio" class="proy-img">
                 <p class="proy-p">Portfolio</p>
             </a>
 
-            <a href="#" target="_blank" class="proyecto">
+            <a tabindex="0" href="#" target="_blank" class="proyecto">
                 <img src="img/proy_memes.svg" alt="Generador de memes" class="proy-img">
                 <p class="proy-p">Generador de memes</p>
             </a>
 
-            <a href="#" target="_blank" class="proyecto">
+            <a tabindex="0" href="#" target="_blank" class="proyecto">
                 <img src="img/proy_match.svg" alt="Match 3" class="proy-img">
                 <p class="proy-p">Match 3</p>
             </a>
 
-            <a href="#" target="_blank" class="proyecto">
+            <a tabindex="0" href="#" target="_blank" class="proyecto">
                 <img src="img/proy_gastos.svg" alt="Controlador de Gastos" class="proy-img">
                 <p class="proy-p">Controlador de Gastos</p>
             </a>
 
-            <a href="#" target="_blank" class="proyecto">
+            <a tabindex="0" href="#" target="_blank" class="proyecto">
                 <img src="img/proy_reuniones.svg" alt="Adminstrador de reuniones" class="proy-img">
                 <p class="proy-p">Adminstrador de reuniones</p>
             </a>
 
-            <a href="#" target="_blank" class="proyecto">
+            <a tabindex="0" href="#" target="_blank" class="proyecto">
                 <img src="img/proy_todo_app.svg" alt="Todo app" class="proy-img">
                 <p class="proy-p">Todo app</p>
             </a>
 
-            <a href="#" target="_blank" class="proyecto">
+            <a tabindex="0" href="#" target="_blank" class="proyecto">
                 <img src="img/proy_peliculas.svg" alt="Buscador de películas" class="proy-img" >
                 <p class="proy-p">Buscador de películas</p>
             </a>
@@ -160,22 +160,22 @@
                 </div>
 
                 <div class="redes-sociales">
-                    <a href="#CONTACTO" class="redes">
+                    <a tabindex="0" href="#CONTACTO" class="redes">
                         <i class="fa-brands fa-twitter iconos-redes-sociales" ></i>
                         <span class="redes-sociales-span"> @Maguieb</span>
                     </a>
 
-                    <a href="https://github.com/MaguiBrollo" target="_blank" class="redes">
+                    <a tabindex="0" href="https://github.com/MaguiBrollo" target="_blank" class="redes">
                         <i class="fa-brands fa-github-alt iconos-redes-sociales"></i>
                         <span class="redes-sociales-span"> Magui Brollo </span>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/magui-brollo/" target="_blank" class="redes">
+                    <a tabindex="0" href="https://www.linkedin.com/in/magui-brollo/" target="_blank" class="redes">
                         <i class="fa-brands fa-linkedin-in iconos-redes-sociales"></i>
                         <span class="redes-sociales-span"> Magui Brollo </span>
                     </a>
 
-                    <a href="mailto:maguieb@gmail.com?Subject=Interesado%20en%20tus%20servicios%20como%20desarrolladora%20Frontend." class="redes">
+                    <a tabindex="0" href="mailto:maguieb@gmail.com?Subject=Interesado%20en%20tus%20servicios%20como%20desarrolladora%20Frontend." class="redes">
                         <i class="fa-solid fa-envelope iconos-redes-sociales"></i>
                         <span class="redes-sociales-span"> maguieb@gmail.com </span>
                     </a>
@@ -197,7 +197,7 @@
                             <div class="cont-label-input">
                                 <label for="campo_nombre">Nombre*</label>
                                 <!-- label for="...", debe coincidir con el id del input -->
-                                <input type="text" placeholder="Tu nombre" name="nombre" class="form_input"
+                                <input tabindex="0" type="text" placeholder="Tu nombre" name="nombre" class="form_input"
                                     id="campo_nombre" required /> 
                                 
                                 <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i> <!-- ROJO-->
@@ -206,7 +206,7 @@
 
                             <div class="cont-label-input">
                                 <label for="campo_apellido">Apellido*</label>
-                                <input type="text" placeholder="Tu apellido" name="apellido" class="form_input"
+                                <input  tabindex="0" type="text" placeholder="Tu apellido" name="apellido" class="form_input"
                                     id="campo_apellido" required />
 
                                 <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i> <!-- ROJO-->
@@ -216,7 +216,7 @@
 
                         <div class="cont-label-input">
                             <label for="campo_email">E-mail*</label>
-                            <input type="email" placeholder="Tu e-mail" name="email" class="form_input" id="campo_email"
+                            <input tabindex="0" type="email" placeholder="Tu e-mail" name="email" class="form_input" id="campo_email"
                                 required />
                             <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i> <!-- ROJO-->
                             <i class="far fa-check-circle icon-valid" aria-hidden="true"></i> <!-- verde-->
@@ -224,14 +224,14 @@
 
                         <div class="cont-label-input">
                             <label for="campo_mensaje">Mensaje*</label>
-                            <textarea name="mensaje" class="form_input" cols="30" rows="10" id="campo_mensaje" 
+                            <textarea tabindex="0" name="mensaje" class="form_input" cols="30" rows="10" id="campo_mensaje" 
                               placeholder="Escribe tu mensaje aquí." aria-label="mensaje"  required></textarea>
                              
                               <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i> <!-- ROJO-->
                               <i class="far fa-check-circle icon-valid" aria-hidden="true"></i> <!-- verde-->
                         </div>
 
-                        <button type="submit" class="formulario-btn">Enviar</button>
+                        <button tabindex="0" type="submit" class="formulario-btn">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -243,29 +243,29 @@
     <footer>
         <nav>
             <ul class="ul-footer nav-footer">
-                <li class="li-footer"> <a class="a-footer" href="#HOLA">HOLA</a> </li>
-                <li class="li-footer"> <a class="a-footer" href="#CONOCIMIENTOS">CONOCIMIENTOS</a> </li>
-                <li class="li-footer"> <a class="a-footer" href="#PROYECTOS">PROYECTOS</a> </li>
-                <li class="li-footer"> <a class="a-footer" href="#CONTACTO">CONTACTO</a> </li>
+                <li class="li-footer"> <a tabindex="0" class="a-footer" href="#HOLA">HOLA</a> </li>
+                <li class="li-footer"> <a tabindex="0" class="a-footer" href="#CONOCIMIENTOS">CONOCIMIENTOS</a> </li>
+                <li class="li-footer"> <a tabindex="0" class="a-footer" href="#PROYECTOS">PROYECTOS</a> </li>
+                <li class="li-footer"> <a tabindex="0" class="a-footer" href="#CONTACTO">CONTACTO</a> </li>
             </ul>
         </nav>
 
         <nav>
             <ul class="ul-footer">
 
-                <li> <a href="#CONTACTO" class="a-footer-redes">
+                <li> <a tabindex="0" href="#CONTACTO" class="a-footer-redes">
                     <i class="fa-brands fa-twitter iconos-footer" ></i>
                 </a> </li>
                 
-                <li> <a href="https://github.com/MaguiBrollo" target="_blank" class="a-footer-redes">
+                <li> <a tabindex="0" href="https://github.com/MaguiBrollo" target="_blank" class="a-footer-redes">
                     <i class="fa-brands fa-github-alt iconos-footer"></i>
                 </a> </li>
 
-                <li> <a href="https://www.linkedin.com/in/magui-brollo/" target="_blank" class="a-footer-redes">
+                <li> <a tabindex="0" href="https://www.linkedin.com/in/magui-brollo/" target="_blank" class="a-footer-redes">
                     <i class="fa-brands fa-linkedin-in iconos-footer"></i>
                 </a> </li>
 
-                <li> <a href="mailto:maguieb@gmail.com?Subject=Interesado%20en%20tus%20servicios%20como%20desarrolladora%20Frontend." class="a-footer-redes">
+                <li> <a tabindex="0" href="mailto:maguieb@gmail.com?Subject=Interesado%20en%20tus%20servicios%20como%20desarrolladora%20Frontend." class="a-footer-redes">
                     <i class="fa-solid fa-envelope iconos-footer"></i>
                 </a> </li>
             </ul>

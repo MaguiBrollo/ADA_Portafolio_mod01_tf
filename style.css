@@ -4,6 +4,8 @@
     --variable-color-sec: #FFFFFF;
     --variable-color-ter:#F6F7FB;
 
+    --variable-color-borde: #C2BBBB; 
+
     --variable-color-texto:#616161;
 
     --variable-ancho-ppal:1300px;
@@ -252,9 +254,9 @@ a{
     width: 50%;
     height: 200px;
     margin: 10px;   
-    border: 1px solid rgb(194, 187, 187);
+    border: 1px solid var(--variable-color-borde);
     border-radius: 10px;
-    background-color: #FFFFFF;
+    background-color: var(--variable-color-sec);
 }
 .conocim-lenguaje:hover{
     border-color: var(--variable-color-ppal);
@@ -370,9 +372,9 @@ a{
     width: 100%;
     padding: 10px;  
     margin: 20px 0px;
-    border: 1px solid rgb(194, 187, 187);
+    border: 1px solid var(--variable-color-borde);
     border-radius: 10px;
-    background-color: #FFFFFF;
+    background-color: var(--variable-color-sec);
 }
 .proyecto:hover{
     border-color: var(--variable-color-ppal);
@@ -381,7 +383,7 @@ a{
 
 a .proyecto{
     text-decoration: none;
-    color: #2e2e31;
+    color: #2e2e31; 
 }
 
 .proy-img{
@@ -475,11 +477,11 @@ a.redes:focus /*los "a" que tengan la clase "redes"*/
 /* ---- iconos de las redes sociales  ----*/
 .redes:hover .iconos-redes-sociales{ /*para hover para todos los link*/
     color: white;
-    background-color: #EE457A;
+    background-color: var(--variable-color-ppal);
 }
 
 .iconos-redes-sociales{   
-    color: #EE457A;
+    color: var(--variable-color-ppal);
     background-color: var(--variable-color-sec);
     width: 2.3rem;
     height: 2.3rem;
@@ -553,7 +555,15 @@ input:valid:focus,
 textarea:valid:focus {
   box-shadow: 0px 0px 5px #88c459;
 }
+input:valid,
+textarea:valid {
+  border: 1px solid #88c459;
+}
 
+.icon-valid {
+    color: #88c459;
+}
+  
 input:invalid:not(:placeholder-shown):focus,
 textarea:invalid:not(:placeholder-shown):focus {
   box-shadow: 0px 0px 5px #f5414f;
@@ -564,11 +574,10 @@ textarea:invalid:not(:placeholder-shown) {
   border: 1px solid #f5414f;
 }
 
-input:valid,
-textarea:valid {
-  border: 1px solid #88c459;
+.icon-invalid {
+    color: #f5414f;
 }
-
+  
 .icon-invalid,
 .icon-valid {
   display: none;
@@ -576,14 +585,6 @@ textarea:valid {
   bottom: 20px;
   right: 20px;
   transform: translateY(50%);
-}
-
-.icon-valid {
-  color: #88c459;
-}
-
-.icon-invalid {
-  color: #f5414f;
 }
 
 input:valid ~ .icon-valid,
@@ -697,7 +698,7 @@ footer{
 
 /*--------------- iconos de las redes sociales ----------------  */
 .iconos-footer{   
-    color: #EE457A;
+    color: var(--variable-color-ppal);
     background-color: var(--variable-color-sec);
 
     width: 2.3rem;
@@ -712,7 +713,7 @@ footer{
 }
 .iconos-footer:hover{
     color: white;
-    background-color: #EE457A;
+    background-color: var(--variable-color-ppal);
 }
 
 
