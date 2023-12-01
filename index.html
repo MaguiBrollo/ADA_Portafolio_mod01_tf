@@ -8,7 +8,7 @@
 
     <link rel="icon" href="img/favicon.ico" type="image/png"  alt="Favicon"/>
 
-    <!-- STYLE para los iconos de redes sociales-->
+    <!-- STYLE para los iconos de redes sociales y el menu hamburguesa-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,12 +21,22 @@
 <body>
 
     <header>
-        <nav class="nav">
+
+        <button id="abrir" class="abrir-menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav class="nav" id="nav">
+
+            <button id="cerrar" class="cerrar-menu">
+                <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+
             <ul class="ul-header">
-                <li class="li-header"> <a tabindex="0" class="a-header" href="#HOLA">HOLA</a> </li>
-                <li class="li-header"> <a tabindex="0" class="a-header" href="#CONOCIMIENTOS">CONOCIMIENTOS</a> </li>
-                <li class="li-header"> <a tabindex="0" class="a-header" href="#PROYECTOS">PROYECTOS</a> </li>
-                <li class="li-header"> <a tabindex="0" class="a-header ultimo" href="#CONTACTO">CONTACTO</a> </li>
+                <li class="li-header"> <a tabindex="0" class="a-header" href="#HOLA"  id="cerrar_h" >HOLA</a> </li>
+                <li class="li-header"> <a tabindex="0" class="a-header" href="#CONOCIMIENTOS" id="cerrar_c" >CONOCIMIENTOS</a> </li>
+                <li class="li-header"> <a tabindex="0" class="a-header" href="#PROYECTOS" id="cerrar_p" >PROYECTOS</a> </li>
+                <li class="li-header"> <a tabindex="0" class="a-header ultimo" href="#CONTACTO" id="cerrar_co">CONTACTO</a> </li>
             </ul>
         </nav>
 
@@ -272,6 +282,10 @@
         </nav>
         <h3 class="h3-footer">Hecho con <span class="icocor2">&#128150;</span> por Magui</h3>
     </footer>
+
+
+    <!-------  Para el menu hamburguesa  -------->
+    <script src="/js/main.js" > </script>
 
 </body>
 

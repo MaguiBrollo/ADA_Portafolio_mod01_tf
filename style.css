@@ -40,12 +40,12 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     z-index: 5;   /* para que el header quede bien por encima de cualquier otro código*/
     position: fixed;  /*posicionamiento fijo (absoluto) */
     top:0;         /*top acompaña a fixed, significa que quede arriba c/r al browser */
 
-    
+
     background-color: var(--variable-color-sec);
     box-shadow: 0px 10px 15px -3px rgb(214, 204, 204);
 }
@@ -56,7 +56,7 @@ header{
     justify-content: end;
 }
 
-ul{
+ul{   /*OJO que este  se usa en todos los "ul" --------*/
     display: inline;
     list-style-type: none;     /*saca viñeta  a la lista*/
 }
@@ -72,36 +72,96 @@ ul{
     border:1px solid var(--variable-color-ppal);
     border-radius: 40px;
 }
-.li-header:nth-child(4){
-    background-color: var(--variable-color-ppal);
-}
-.ultimo{
-    color: white;
-}
-
-.li-header:nth-child(4):hover{
-    opacity: 0.8;
-}
-
 .li-header:hover{
     background-color: var(--variable-color-ppal); 
  }
 
-a{
+.li-header:nth-child(4){
+    background-color: var(--variable-color-ppal);
+}
+.li-header:nth-child(4):hover{
+    opacity: 0.8;
+}
+
+.ultimo{
+    color: white;
+}
+
+a{     /*OJO que este  se usa en todos los "a" -------*/
     font-size: 0.8rem;
     text-decoration: none;
     color: var(--variable-color-texto);
 }
+
 .a-header:hover{
     color: white;
 }
 
+
+/* menu- hamburguesa*/
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+
+
 /*******************************************************************/
 /* ---- media query HEADER -----------------*/
 @media (width<=1100px) {
-    header{
+    /*header{
       display: none;
     }
+    */
+    header{
+        display: flex;
+        justify-content: end;
+        padding-right: 30px;
+    }
+    
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        color: var(--variable-color-ppal);
+        background-color: var(--variable-color-sec);
+        background-color: transparent;
+        cursor: pointer;  /*para que aparezca la manito sobre el btn*/
+    }
+
+    .nav{
+        width: 100%;
+
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;     /*-------------------*/
+        background-color: var(--variable-color-sec);
+        padding: 1rem;
+
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+    }
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .ul-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+   
+    
+
+
 }
 /*******************************************************************/
 
