@@ -147,7 +147,7 @@ a{     /*OJO que este  se usa en todos los "a" -------*/
 
         box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
     }
-    .nav.visible{
+    .visible{
         opacity: 1;
         visibility: visible;
     }

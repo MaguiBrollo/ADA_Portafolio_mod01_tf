@@ -1,11 +1,11 @@
-const nav = document.querySelector("#nav")
-const abrir = document.querySelector("#abrir")
-const cerrar = document.querySelector("#cerrar")
+const nav = document.getElementById("nav")
+const abrir = document.getElementById("abrir")
+const cerrar = document.getElementById("cerrar")
 
-const cerrar_h = document.querySelector("#cerrar_h")
-const cerrar_p = document.querySelector("#cerrar_p")
-const cerrar_c = document.querySelector("#cerrar_c")
-const cerrar_co = document.querySelector("#cerrar_co")
+const cerrar_h = document.getElementById("cerrar_h")
+const cerrar_p = document.getElementById("cerrar_p")
+const cerrar_c = document.getElementById("cerrar_c")
+const cerrar_co = document.getElementById("cerrar_co")
 
 
 abrir.addEventListener("click", () => {
